@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/avatar.webp" type="image/webp">
+</head>
+<body>
+    <header>
+        <div class="avatar">
+            <img src="images/avatar.webp" alt="Avatar">
+            <span>Brayan Pahuara</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="libros.html">Libros</a></li>
+                <li><a href="lugares.html">Lugares</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="contacto">
+            <h1>Contacto</h1>
+        <div class="redes">
+            <h2>Redes sociales</h2>
+            <a href="" target="_blank" class="github">
+                <img src="images/iconos/github-64.webp" alt="GitHub">
+                <span>GitHub</span>
+            </a>
+        </div>
+        <div class="correo">
+            <h2>Corre electrónico</h2>
+            <div class="correo-box">
+                <span id="miCorreo">02hxbrayan@gmail.com</span>
+                <div class="acciones">
+                    <a href="mailto:02hxbrayan@gmail.com" class="btn">
+                        <img src="images/iconos/enviar-64.webp" alt="Enviar correo">
+                    </a>
+                    <button oneclick="copiarCorreo()" class="btn">
+                        <img src="images/iconos/copiar-64.webp" alt="Copiar correo">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>© 2025 Brayan Pahuara</p>
+    </footer>
+    <script>
+        function copiarCorreo() {
+            const correo = document.getElementById("miCorreo").innerText;
+            navigator.clipboard.writeText(correo).then(() => {
+                alert("Correo copiado: " + correo);
+            });
+        }
+    </script>
+</body>
+</html>
